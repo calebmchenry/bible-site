@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  background-color: var(--primary-color);
+  padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+}
+.navbar__link,
+.header__title {
+  text-decoration: none;
+  color: var(--light-text-color);
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar__link {
+  padding-left: calc(var(--spacing-unit) * 0.5);
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar_link {
+    display: none;
+  }
+}
