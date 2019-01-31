@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Bible Site`,
+    title: `The Bible Is`,
     description: `Growing Faith.`,
     author: `Caleb McHenry`,
   },
@@ -21,12 +21,12 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#080899`,
+        theme_color: `#080899`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/TheBibleIsLogo.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-netlify-cms`,
   ],
-}
+};
