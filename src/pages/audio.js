@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../components/layout/layout'
-import SEO from '../components/seo'
+import Layout from '../components/layout/layout';
+import SEO from '../components/seo';
 
 const AudioPage = () => (
   <Layout>
@@ -10,7 +10,8 @@ const AudioPage = () => (
       keywords={[`bible`, `christian`, `audio`, `sermons`, `lessons`]}
     />
     <h1>Audio</h1>
+    <span>Coming Soon...</span>
   </Layout>
-)
+);
 
-export default AudioPage
+export default AudioPage;

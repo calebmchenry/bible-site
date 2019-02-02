@@ -1,6 +1,6 @@
 :root {
   --primary-color: #080899;
-  --secondary-color: #eee;
+  --secondary-color: #005aff;
 
   --white-background-color: #ffffff;
   --light-gray-background-color: #eeeeee;
@@ -15,6 +15,7 @@
   --spacing-unit: 2rem;
 
   --header-title-font-size: 2.4rem;
+  --footer-height: 60px;
 }
 
 * {
@@ -34,15 +35,23 @@ body {
   width: 100vw;
   margin: 0;
   padding-top: calc(var(--header-title-font-size) + 2 * var(--spacing-unit));
+  padding-bottom: var(--footer-height);
   font-size: 1.6rem;
   color: var(--primary-text-color);
 }
 
 main {
+}
+
+section {
   max-width: calc(var(--spacing-unit) * 60);
   width: 100%;
   margin: 0 auto;
   padding: calc(var(--spacing-unit) * 2);
+}
+
+section:nth-child(even) {
+  background-color: var(--light-gray-background-color);
 }
 
 footer {
@@ -50,8 +59,10 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
+  height: var(--footer-height);
   padding: var(--spacing-unit) calc(var(--spacing-unit) * 3);
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
 }
 
 h1 {

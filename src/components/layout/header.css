@@ -22,6 +22,7 @@
 
 .header__title {
   font-size: var(--header-title-font-size);
+  line-height: 1;
   padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
 }
 
