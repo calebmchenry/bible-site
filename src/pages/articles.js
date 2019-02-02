@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../components/layout/layout'
-import SEO from '../components/seo'
+import Layout from '../components/layout/layout';
+import SEO from '../components/seo';
 
 const ArticlePage = () => (
   <Layout>
     <SEO title="Page two" keywords={[`bible`, `christian`, `articles`]} />
     <h1>Articles</h1>
+    <span>Coming Soon...</span>
   </Layout>
-)
+);
 
-export default ArticlePage
+export default ArticlePage;
