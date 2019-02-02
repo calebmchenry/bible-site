@@ -3,26 +3,27 @@ import React from 'react';
 import Layout from '../components/layout/layout';
 import Image from '../components/image';
 import SEO from '../components/seo';
+import WordCycleSection from '../components/sections/word-cycle-section';
+import TextSection from '../components/sections/text-section';
+import IconSection from '../components/sections/icon-section/icon-section';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`bible`, `christian`, `truth`]} />
-    <h1>
-      The Bible is
-      <div className="slidingVertical">
-        <span>Help</span>
-        <span>Love</span>
-        <span>Wisdom</span>
-        <span>Truth</span>
-        <span>Everything</span>
+    <WordCycleSection />
+    <TextSection>
+      <h1>What is the goal of this website?</h1>
+      <p>
+        I made this website to help me apply my faith. I hope you look to this
+        site as a way to help your faith grow as well.
+      </p>
+    </TextSection>
+    <IconSection />
+    <section>
+      <div style={{ width: `150px`, margin: `auto` }}>
+        <Image />
       </div>
-    </h1>
-    <h1>for those who apply it.</h1>
-    <p>Welcome to this bible site.</p>
-    <p>It is currently under construction.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
+    </section>
   </Layout>
 );
 

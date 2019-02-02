@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `The Bible Is`,
+        short_name: `The Bible Is`,
         start_url: `/`,
         background_color: `#080899`,
         theme_color: `#080899`,
