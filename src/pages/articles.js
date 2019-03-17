@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
 import SEO from '../components/seo';
+import ArticleCard from '../components/articleCard';
 
 const ArticlePage = () => {
   const articles = useStaticQuery(graphql`
@@ -10,6 +11,7 @@ const ArticlePage = () => {
       allMarkdownRemark(
         limit: 10
         sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { frontmatter: { templateKey: { eq: "article" } } }
       ) {
         edges {
           node {
@@ -24,14 +26,17 @@ const ArticlePage = () => {
     }
   `);
 
-  console.log(articles);
-
   return (
     <Layout>
       <SEO title="Page two" keywords={[`bible`, `christian`, `articles`]} />
       <h1>Articles</h1>
       {articles.allMarkdownRemark.edges.map(({ node }) => (
-        <h2 key={node.frontmatter.title}>{node.frontmatter.title}</h2>
+        <ArticleCard
+          key={node.frontmatter.title}
+          title={node.frontmatter.title}
+          date={node.frontmatter.date}
+          excerpt={node.excerpt}
+        />
       ))}
     </Layout>
   );
