@@ -9,8 +9,10 @@ const AudioPage = () => (
       title="Page two"
       keywords={[`bible`, `christian`, `audio`, `sermons`, `lessons`]}
     />
-    <h1>Audio</h1>
-    <span>Coming Soon...</span>
+    <div className="container page">
+      <h1>Audio</h1>
+      <span>Coming Soon...</span>
+    </div>
   </Layout>
 );
 

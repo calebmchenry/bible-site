@@ -1,0 +1,20 @@
+.breadcrumbs {
+  list-style: none;
+  padding: 0;
+  font-weight: bold;
+}
+
+.breadcrumbs > li {
+  display: inline;
+  font-size: 1.8rem;
+}
+
+.breadcrumbs > li::before {
+  content: "/";
+  margin: 0 calc(var(--spacing-unit) / 2);
+}
+
+.breadcrumbs > li:first-child::before {
+  content: none;
+  margin-left: 0;
+}

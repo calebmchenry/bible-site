@@ -14,7 +14,10 @@ export default class IconLink extends Component {
 
   render() {
     return (
-      <Link className="icon-section__wrapper" to={this.props.path}>
+      <Link
+        className="icon-section__wrapper no-decoration"
+        to={this.props.path}
+      >
         <img
           className="icon-section__icon"
           src={this.props.icon}
