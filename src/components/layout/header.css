@@ -1,15 +1,7 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-
-  background-color: var(--primary-color);
 }
 
 .header > * {
@@ -17,18 +9,17 @@
 }
 
 .header * {
-  color: var(--light-text-color);
+  color: var(--contrary-primary-text-color);
 }
 
 .header__title {
   font-size: var(--header-title-font-size);
   line-height: 1;
-  padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+  padding: var(--spacing-unit) 0;
 }
 
-header.header a {
-  text-decoration: none;
-  color: var(--light-text-color);
+.header a {
+  color: var(--contrary-primary-text-color);
 }
 
 .navbar {
@@ -44,7 +35,7 @@ header.header a {
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   .header,
   .navbar {
     flex-direction: column;
@@ -55,7 +46,7 @@ header.header a {
     max-height: 0;
     width: 100%;
     overflow: hidden;
-    transition-duration: 500ms;
+    transition-duration: 250ms;
     padding: 0;
   }
 

@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
 
+import PropTypes from 'prop-types';
+
 import './text-section.css';
 
-export default class TextSection extends Component {
+class TextSection extends Component {
   render() {
-    return <section>{this.props.children}</section>;
+    return (
+      <section>
+        <div className="container">{this.props.children}</div>
+      </section>
+    );
   }
 }
+
+TextSection.propTypes = {
+  children: PropTypes.array,
+};
+
+export default TextSection;

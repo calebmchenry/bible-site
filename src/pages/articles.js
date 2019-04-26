@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
 import SEO from '../components/seo';
-import ArticleCard from '../components/articleCard';
+import ArticleCard from '../components/ArticleCard/ArticleCard';
 
 const ArticlePage = () => {
   const articles = useStaticQuery(graphql`
@@ -15,10 +15,14 @@ const ArticlePage = () => {
       ) {
         edges {
           node {
-            excerpt
+            excerpt(pruneLength: 500)
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               title
+              path
+              description
+              tags
+              author
             }
           }
         }
@@ -28,16 +32,21 @@ const ArticlePage = () => {
 
   return (
     <Layout>
-      <SEO title="Page two" keywords={[`bible`, `christian`, `articles`]} />
-      <h1>Articles</h1>
-      {articles.allMarkdownRemark.edges.map(({ node }) => (
-        <ArticleCard
-          key={node.frontmatter.title}
-          title={node.frontmatter.title}
-          date={node.frontmatter.date}
-          excerpt={node.excerpt}
-        />
-      ))}
+      <SEO title="Articles" keywords={[`bible`, `christian`, `articles`]} />
+      <div className="container page">
+        <h1>Articles</h1>
+        {articles.allMarkdownRemark.edges.map(({ node }) => (
+          <ArticleCard
+            key={node.frontmatter.path}
+            author={node.frontmatter.author}
+            date={node.frontmatter.date}
+            description={node.excerpt}
+            path={node.frontmatter.path}
+            tags={node.frontmatter.tags}
+            title={node.frontmatter.title}
+          />
+        ))}
+      </div>
     </Layout>
   );
 };

@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-gray-background-color);
+}
+
+.top > ul {
+  padding: 0;
+  list-style: none;
+}
+
+.top > ul > li {
+  display: inline;
+}
+
+.top > ul > li::before {
+  content: "|";
+  margin: 0 var(--spacing-unit);
+}
+
+.top > ul > li:first-child::before {
+  content: none;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(var(--spacing-unit) / 2);
+  background: var(--primary-color);
+}

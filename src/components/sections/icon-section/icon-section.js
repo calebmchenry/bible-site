@@ -11,10 +11,12 @@ import './icon-section.css';
 export default class IconSection extends Component {
   render() {
     return (
-      <section className="icon-section">
-        <IconLink path="/articles/" icon={ArticleIcon} name="Articles" />
-        <IconLink path="/charts/" icon={ChartIcon} name="Charts" />
-        <IconLink path="/audio/" icon={AudioIcon} name="Audio" />
+      <section>
+        <div className="container icon-section">
+          <IconLink path="/articles/" icon={ArticleIcon} name="Articles" />
+          <IconLink path="/charts/" icon={ChartIcon} name="Charts" />
+          <IconLink path="/audio/" icon={AudioIcon} name="Audio" />
+        </div>
       </section>
     );
   }

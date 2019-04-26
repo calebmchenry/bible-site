@@ -28,10 +28,12 @@ const ChartPage = () => {
   return (
     <Layout>
       <SEO title="Page two" keywords={[`bible`, `christian`, `charts`]} />
-      <h1>Charts</h1>
-      {charts.allMarkdownRemark.edges.map(({ node }) => (
-        <h2 key={node.frontmatter.title}>{node.frontmatter.title}</h2>
-      ))}
+      <div className="container page">
+        <h1>Charts</h1>
+        {charts.allMarkdownRemark.edges.map(({ node }) => (
+          <h2 key={node.frontmatter.title}>{node.frontmatter.title}</h2>
+        ))}
+      </div>
     </Layout>
   );
 };
