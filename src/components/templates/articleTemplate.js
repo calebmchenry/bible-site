@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { graphql } from 'gatsby';
 import Layout from '../layout/layout';
-import BreadCrumbs from '../shared/BreadCrumbs/Breadcrumbs';
+import BreadCrumbs from '../shared/Breadcrumbs/Breadcrumbs';
 
 export default function articleTemplate({ data }) {
   const { markdownRemark } = data;
