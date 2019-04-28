@@ -110,6 +110,11 @@ footer {
   color: var(--contrary-primary-text-color);
 }
 
+article h1 {
+  font-size: 2em;
+  border-bottom: 1px solid var(--primary-border-color);
+}
+
 h1,
 h2,
 h3,

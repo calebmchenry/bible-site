@@ -8,10 +8,10 @@ tags:
   - introduction
 ---
 
-## Welcome!
+# Welcome!
 Welcome to the bible is. As a lover of God I wanted to make a place where I could write content to help myself and others grow.
 
-## Goals
+# Goals
 1. Praise God
 2. Grow
 3. Learn

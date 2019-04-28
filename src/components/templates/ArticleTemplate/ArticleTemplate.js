@@ -22,7 +22,7 @@ export default function ArticleTemplate({ data }) {
         <div>
           <span>{frontmatter.date}</span>
         </div>
-        <h1>{frontmatter.title}</h1>
+        <h1 className={style.mainTitle}>{frontmatter.title}</h1>
         <div>
           <span>
             <em>
