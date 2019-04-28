@@ -1,0 +1,12 @@
+.tags {
+  display: flex;
+}
+
+.tag {
+  background-color: var(--blue-accent-background-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 16px;
+  padding: 4px 8px;
+  margin-right: calc(var(--spacing-unit) / 4);
+}

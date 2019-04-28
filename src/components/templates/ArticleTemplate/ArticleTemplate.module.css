@@ -1,0 +1,8 @@
+.articleTemplate span {
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+}
+
+.tags {
+  margin: 1em 0;
+}

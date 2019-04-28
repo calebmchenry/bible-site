@@ -12,7 +12,7 @@ tags:
 Welcome to the bible is. As a lover of God I wanted to make a place where I could write content to help myself and others grow.
 
 ## Goals
-1. Grow
-2. Teach
+1. Praise God
+2. Grow
 3. Learn
 4. Teach

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import style from './ArticleCard.module.css';
+import Tags from '../shared/Tags/Tags';
 const articleCard = props => {
   const datetime = new Date(props.date).toISOString();
 
@@ -13,7 +14,7 @@ const articleCard = props => {
         </span>
       </div>
       <h1>
-        <Link className="no-decoration" to={props.path}>
+        <Link className="no-decoration" to={props.slug}>
           {props.title}
         </Link>
       </h1>
@@ -24,13 +25,7 @@ const articleCard = props => {
         </span>
       </div>
       <p>{props.description}</p>
-      <div>
-        {props.tags.map(tag => (
-          <span className={style.tag} key={tag}>
-            {tag}
-          </span>
-        ))}
-      </div>
+      <Tags tags={props.tags} />
     </article>
   );
 };
@@ -39,7 +34,7 @@ articleCard.propTypes = {
   author: PropTypes.string,
   date: PropTypes.string,
   description: PropTypes.string,
-  path: PropTypes.string,
+  slug: PropTypes.string,
   title: PropTypes.string,
   tags: PropTypes.array,
 };

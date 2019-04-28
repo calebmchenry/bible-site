@@ -16,10 +16,12 @@ const ArticlePage = () => {
         edges {
           node {
             excerpt(pruneLength: 500)
+            fields {
+              slug
+            }
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               title
-              path
               description
               tags
               author
@@ -37,11 +39,11 @@ const ArticlePage = () => {
         <h1>Articles</h1>
         {articles.allMarkdownRemark.edges.map(({ node }) => (
           <ArticleCard
-            key={node.frontmatter.path}
+            key={node.fields.slug}
             author={node.frontmatter.author}
             date={node.frontmatter.date}
             description={node.excerpt}
-            path={node.frontmatter.path}
+            slug={node.fields.slug}
             tags={node.frontmatter.tags}
             title={node.frontmatter.title}
           />
