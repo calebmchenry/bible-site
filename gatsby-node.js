@@ -4,7 +4,7 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const articleTemplate = path.resolve(
-    `src/components/templates/articleTemplate.js`
+    `src/components/templates/ArticleTemplate.js`
   );
 
   return graphql(`
@@ -17,6 +17,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              slug
             }
           }
         }
@@ -29,7 +30,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: node.frontmatter.path,
+        path: node.frontmatter.slug,
         component: articleTemplate,
         context: {},
       });

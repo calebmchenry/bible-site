@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { graphql } from 'gatsby';
 import Layout from '../layout/layout';
-import BreadCrumbs from '../shared/Breadcrumbs/Breadcrumbs';
+import Breadcrumbs from '../shared/Breadcrumbs/Breadcrumbs';
 
-export default function articleTemplate({ data }) {
+export default function ArticleTemplate({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const linkData = [
@@ -16,7 +16,7 @@ export default function articleTemplate({ data }) {
   return (
     <Layout>
       <div className="container page">
-        <BreadCrumbs linkData={linkData} />
+        <Breadcrumbs linkData={linkData} />
         <h1>{frontmatter.title}</h1>
         <p>{frontmatter.author}</p>
         <p>{frontmatter.date}</p>
@@ -42,6 +42,6 @@ export const pageQuery = graphql`
   }
 `;
 
-articleTemplate.propTypes = {
+ArticleTemplate.propTypes = {
   data: PropTypes.object,
 };
