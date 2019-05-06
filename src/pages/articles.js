@@ -42,7 +42,7 @@ const ArticlePage = () => {
             key={node.fields.slug}
             author={node.frontmatter.author}
             date={node.frontmatter.date}
-            description={node.excerpt}
+            excerpt={node.excerpt}
             slug={node.fields.slug}
             tags={node.frontmatter.tags}
             title={node.frontmatter.title}

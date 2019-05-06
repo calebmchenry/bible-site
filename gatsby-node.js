@@ -8,10 +8,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       getNode,
     });
+    const prefix =
+      node.frontmatter.templateKey === 'audio'
+        ? '/audio'
+        : `/${node.frontmatter.templateKey}s`;
     createNodeField({
       node,
       name: 'slug',
-      value: slug,
+      value: `${prefix}${slug}`,
     });
   }
 };
