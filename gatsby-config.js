@@ -5,6 +5,12 @@ module.exports = {
     author: `Caleb McHenry`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -42,6 +48,6 @@ module.exports = {
         icon: `src/images/TheBibleIsLogo.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-netlify-cms`, // Said to keep it last
   ],
 };

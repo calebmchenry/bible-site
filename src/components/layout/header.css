@@ -28,14 +28,15 @@
 }
 
 .navbar__link {
-  padding-left: calc(var(--spacing-unit) * 0.5);
+  padding-left: calc(var(--spacing-unit) * 2);
+  font-size: 1.6rem;
 }
 
 .navbar__menu-icon {
   display: none;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1024px) {
   .header,
   .navbar {
     flex-direction: column;
@@ -52,12 +53,12 @@
 
   .navbar > * {
     width: 100%;
-    padding: calc(0.5 * var(--spacing-unit)) calc(var(--spacing-unit) * 2);
+    padding: calc(var(--spacing-unit)) calc(var(--spacing-unit) * 2);
     border-top: 1px solid var(--highlight);
   }
 
   .navbar-toggle {
-    max-height: calc(39px * 3); /* * number of links */
+    max-height: calc(60px * 3); /* number of links */
   }
 
   .navbar__menu-icon {

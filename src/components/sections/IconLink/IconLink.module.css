@@ -1,0 +1,27 @@
+.iconLink {
+  flex: 1;
+  margin: 0 calc(var(--spacing-unit) * 2);
+}
+
+.iconLink img {
+  width: 100%;
+  max-width: 225px;
+  max-height: 225px;
+}
+
+.iconLink h1 {
+  margin-top: calc(var(--spacing-unit) * 0.5);
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .iconLink {
+    max-width: 75%;
+    padding: 0;
+    margin-top: calc(var(--spacing-unit) * 2.5);
+  }
+
+  .iconLink:first-child {
+    margin-top: 0;
+  }
+}

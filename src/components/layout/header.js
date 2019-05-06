@@ -66,13 +66,13 @@ const Header = props => {
           className={opened === true ? 'navbar navbar-toggle' : 'navbar'}
         >
           <Link className="no-decoration navbar__link" to="/articles/">
-            articles
+            Articles
           </Link>
-          <Link className="navbar__link no-decoration" to="/charts/">
-            charts
+          <Link className="no-decoration navbar__link" to="/charts/">
+            Charts
           </Link>
-          <Link className="navbar__link no-decoration" to="/audio/">
-            audio
+          <Link className="no-decoration navbar__link" to="/audio/">
+            Audio
           </Link>
         </nav>
       </div>
@@ -82,10 +82,6 @@ const Header = props => {
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
 };
 
 export default Header;

@@ -1,7 +1,7 @@
 ---
 templateKey: chart
 title: Test Chart
-path: '/charts/my-first-post'
+author: Theophilus
 date: 2019-03-15T01:56:05.063Z
 description: This is a description
 tags:

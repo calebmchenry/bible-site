@@ -24,7 +24,9 @@ const articleCard = props => {
           <em>{props.author}</em>
         </span>
       </div>
-      <p>{props.description}</p>
+      <p>
+        {props.excerpt}... <Link to={props.slug}>Read article</Link>
+      </p>
       <Tags tags={props.tags} />
     </article>
   );
@@ -33,7 +35,7 @@ const articleCard = props => {
 articleCard.propTypes = {
   author: PropTypes.string,
   date: PropTypes.string,
-  description: PropTypes.string,
+  excerpt: PropTypes.string,
   slug: PropTypes.string,
   title: PropTypes.string,
   tags: PropTypes.array,
