@@ -33,6 +33,13 @@ module.exports = {
         path: `${__dirname}/src/pages/charts`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `audio`,
+        path: `${__dirname}/src/pages/audio`,
+      },
+    },
     'gatsby-transformer-remark',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

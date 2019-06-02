@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout/layout';
 import SEO from '../components/seo';
 
+import ChartCard from '../components/ChartCard/ChartCard';
+
 const ChartPage = () => {
   const charts = useStaticQuery(graphql`
     query ChartListing {
@@ -14,10 +16,17 @@ const ChartPage = () => {
       ) {
         edges {
           node {
-            excerpt
+            excerpt(pruneLength: 500)
+            fields {
+              slug
+            }
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               title
+              description
+              image
+              tags
+              author
             }
           }
         }
@@ -27,11 +36,20 @@ const ChartPage = () => {
 
   return (
     <Layout>
-      <SEO title="Page two" keywords={[`bible`, `christian`, `charts`]} />
+      <SEO title="Charts" keywords={[`bible`, `christian`, `charts`]} />
       <div className="container page">
         <h1>Charts</h1>
         {charts.allMarkdownRemark.edges.map(({ node }) => (
-          <h2 key={node.frontmatter.title}>{node.frontmatter.title}</h2>
+          <ChartCard
+            key={node.fields.slug}
+            author={node.frontmatter.author}
+            date={node.frontmatter.date}
+            excerpt={node.excerpt}
+            slug={node.fields.slug}
+            tags={node.frontmatter.tags}
+            title={node.frontmatter.title}
+            image={node.frontmatter.image}
+          />
         ))}
       </div>
     </Layout>

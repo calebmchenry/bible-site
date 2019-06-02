@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import style from './Breadcrumbs.module.css';
 
-const breadcrumbs = props => {
+const Breadcrumbs = props => {
   return (
     <ul className={style.breadcrumbs}>
       {props.linkData.map(linkData => (
@@ -15,12 +15,12 @@ const breadcrumbs = props => {
   );
 };
 
-breadcrumbs.propTypes = {
+Breadcrumbs.propTypes = {
   linkData: PropTypes.array,
 };
 
-breadcrumbs.defaultProps = {
+Breadcrumbs.defaultProps = {
   linkData: [],
 };
 
-export default breadcrumbs;
+export default Breadcrumbs;

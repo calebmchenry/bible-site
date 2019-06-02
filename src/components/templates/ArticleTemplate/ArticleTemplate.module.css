@@ -6,11 +6,3 @@
 .articleTemplate span.accent {
   color: var(--secondary-color);
 }
-
-.mainTitle {
-  font-size: 2.5em;
-}
-
-.tags {
-  margin: 1em 0;
-}

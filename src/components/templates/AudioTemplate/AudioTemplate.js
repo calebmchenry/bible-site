@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { graphql } from 'gatsby';
-import style from './ArticleTemplate.module.css';
+import style from './AudioTemplate.module.css';
 import Layout from '../../layout/layout';
 import PostTitle from '../../PostTitle/PostTitle';
 
-export default function ArticleTemplate({ data }) {
+export default function AudioTemplate({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const linkData = [
     { name: 'Home', href: '/' },
-    { name: 'Articles', href: '/articles/' },
+    { name: 'Audio', href: '/audio/' },
   ];
 
   return (
@@ -24,6 +24,7 @@ export default function ArticleTemplate({ data }) {
           tags={frontmatter.tags}
           title={frontmatter.title}
         />
+        <audio src={frontmatter.audio} />
         <article dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
@@ -44,6 +45,6 @@ export const pageQuery = graphql`
   }
 `;
 
-ArticleTemplate.propTypes = {
+AudioTemplate.propTypes = {
   data: PropTypes.object,
 };

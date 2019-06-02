@@ -23,8 +23,19 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
+  // Articles
   const articleTemplate = path.resolve(
     `src/components/templates/ArticleTemplate/ArticleTemplate.js`
+  );
+
+  // Charts
+  const chartTemplate = path.resolve(
+    `src/components/templates/ChartTemplate/ChartTemplate.js`
+  );
+
+  // Audio
+  const audioTemplate = path.resolve(
+    `src/components/templates/AudioTemplate/AudioTemplate.js`
   );
 
   return graphql(`
@@ -48,9 +59,18 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      let template;
+      let prefix = node.fields.slug.split('/')[1];
+      if (prefix == 'articles') {
+        template = articleTemplate;
+      } else if (prefix == 'charts') {
+        template = chartTemplate;
+      } else {
+        template = audioTemplate;
+      }
       createPage({
         path: node.fields.slug,
-        component: articleTemplate,
+        component: template,
         context: { slug: node.fields.slug },
       });
     });

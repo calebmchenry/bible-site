@@ -1,0 +1,10 @@
+.card {
+  background-color: var(--white-background-color);
+  border: 1px solid var(--primary-border-color);
+  margin: var(--spacing-unit) 0;
+  border-radius: 8px;
+}
+
+.bottomSection {
+  padding: var(--spacing-unit);
+}
