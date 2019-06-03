@@ -1,6 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import style from './charts.module.css';
+
 import Layout from '../components/layout/layout';
 import SEO from '../components/seo';
 
@@ -39,18 +41,20 @@ const ChartPage = () => {
       <SEO title="Charts" keywords={[`bible`, `christian`, `charts`]} />
       <div className="container page">
         <h1>Charts</h1>
-        {charts.allMarkdownRemark.edges.map(({ node }) => (
-          <ChartCard
-            key={node.fields.slug}
-            author={node.frontmatter.author}
-            date={node.frontmatter.date}
-            excerpt={node.excerpt}
-            slug={node.fields.slug}
-            tags={node.frontmatter.tags}
-            title={node.frontmatter.title}
-            image={node.frontmatter.image}
-          />
-        ))}
+        <div className={style.chartContainer}>
+          {charts.allMarkdownRemark.edges.map(({ node }) => (
+            <ChartCard
+              key={node.fields.slug}
+              author={node.frontmatter.author}
+              date={node.frontmatter.date}
+              excerpt={node.excerpt}
+              slug={node.fields.slug}
+              tags={node.frontmatter.tags}
+              title={node.frontmatter.title}
+              image={node.frontmatter.image}
+            />
+          ))}
+        </div>
       </div>
     </Layout>
   );

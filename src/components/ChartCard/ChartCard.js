@@ -7,7 +7,7 @@ import style from './ChartCard.module.css';
 const ChartCard = props => {
   return (
     <article className={style.card}>
-      <img src={props.image} />
+      <img className={style.image} src={props.image} />
       <div className={style.bottomSection}>
         <h2>
           <Link className="no-decoration" to={props.slug}>
