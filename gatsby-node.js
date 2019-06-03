@@ -33,10 +33,11 @@ exports.createPages = ({ actions, graphql }) => {
     `src/components/templates/ChartTemplate/ChartTemplate.js`
   );
 
+  // TODO 6/2/2019 add back when there is audio
   // Audio
-  const audioTemplate = path.resolve(
-    `src/components/templates/AudioTemplate/AudioTemplate.js`
-  );
+  // const audioTemplate = path.resolve(
+  //   `src/components/templates/AudioTemplate/AudioTemplate.js`
+  // );
 
   return graphql(`
     {
@@ -65,9 +66,11 @@ exports.createPages = ({ actions, graphql }) => {
         template = articleTemplate;
       } else if (prefix == 'charts') {
         template = chartTemplate;
-      } else {
-        template = audioTemplate;
       }
+      // TODO 6/2/2019 add back when there is audio
+      // else {
+      //   template = audioTemplate;
+      // }
       createPage({
         path: node.fields.slug,
         component: template,
