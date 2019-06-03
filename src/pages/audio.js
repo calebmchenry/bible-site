@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 const AudioPage = () => (
   <Layout>
     <SEO
-      title="Page two"
+      title="Audio"
       keywords={[`bible`, `christian`, `audio`, `sermons`, `lessons`]}
     />
     <div className="container page">

@@ -46,5 +46,6 @@ collections:
       - {label: "Author", name: "author", widget: "string", default: "Theophilus"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Audio", name: "audio", widget: "file"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}

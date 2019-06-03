@@ -122,6 +122,11 @@ section h1 {
 
 article h1 {
   border-bottom: 1px solid var(--primary-border-color);
+  margin-top: 0.67em;
+}
+
+article h2 {
+  margin-top: 0.83em;
 }
 
 h1,
@@ -149,8 +154,26 @@ blockquote {
   padding: var(--spacing-unit);
 }
 
+@media only screen and (max-height: 768px) {
+  blockquote {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 blockquote > p {
   margin: 0;
+  font-style: italic;
+}
+
+blockquote sup {
+  color: var(--secondary-color);
+}
+
+sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
 }
 
 .accent,
@@ -209,13 +232,13 @@ li > p {
  ***************/
 
 .container {
-  width: 980px;
-  max-width: 980px;
+  width: 768px;
+  max-width: 768px;
   padding: 0 var(--spacing-unit);
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 768px) {
   .container {
     width: 100%;
     max-width: 100%;

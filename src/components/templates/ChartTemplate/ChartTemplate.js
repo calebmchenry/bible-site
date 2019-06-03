@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { graphql } from 'gatsby';
-import style from './ArticleTemplate.module.css';
+import { graphql, Link } from 'gatsby';
+import style from './ChartTemplate.module.css';
 import Layout from '../../layout/layout';
 import PostTitle from '../../PostTitle/PostTitle';
 
-export default function ArticleTemplate({ data }) {
+export default function ChartTemplate({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const linkData = [
     { name: 'Home', href: '/' },
-    { name: 'Articles', href: '/articles/' },
+    { name: 'Charts', href: '/charts/' },
   ];
 
   return (
@@ -24,6 +24,12 @@ export default function ArticleTemplate({ data }) {
           tags={frontmatter.tags}
           title={frontmatter.title}
         />
+        <a
+          href={frontmatter.image}
+          className={`no-decoration ${style.imageLink}`}
+        >
+          <img className={style.image} src={frontmatter.image} />
+        </a>
         <article dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
@@ -38,12 +44,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         author
+        image
         tags
       }
     }
   }
 `;
 
-ArticleTemplate.propTypes = {
+ChartTemplate.propTypes = {
   data: PropTypes.object,
 };

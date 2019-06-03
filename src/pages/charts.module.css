@@ -1,0 +1,11 @@
+.chartContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 768px) {
+  .chartContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
